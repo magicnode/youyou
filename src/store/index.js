@@ -1,20 +1,16 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import * as main from './modules/main'
-import * as search from './modules/search'
+import * as hotel from './modules/hotel'
 
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
   modules: {
-    main,
-    search
+    hotel
   },
   state: {
-    title: '91看图',
-    header: '',
-    indexalbums: []
+    title: '悠游旅游网'
   },
   mutations: {
   },

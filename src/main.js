@@ -3,15 +3,20 @@
 import Vue from 'vue'
 import IView from 'iview'
 import VueLazyload from 'vue-lazyload'
+import REGION_DATA from 'china-area-data'
+import { RegionPicker } from 'vue-region-picker'
 
 import App from './App'
 import router from './router'
 import store from './store'
+
 import {picurl, ishot, isnull} from './filters'
 import vImg from '@/components/Lazyimg'
 import 'iview/dist/styles/iview.css'
 
 Vue.config.productionTip = false
+
+RegionPicker.region = REGION_DATA
 
 Vue.use(IView)
 Vue.use(VueLazyload, {
@@ -22,6 +27,7 @@ Vue.use(VueLazyload, {
 })
 
 Vue.component('v-img', vImg)
+Vue.component('region-picker', RegionPicker)
 
 Vue.filter('pic', picurl)
 Vue.filter('ishot', ishot)
