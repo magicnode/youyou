@@ -3,3 +3,75 @@
 .normal-shadow {
 	box-shadow: 0 0 30px @pink50;
 }
+
+.container {
+  width: 1180px;
+  margin: 0 auto;
+  padding: 0 0;
+  overflow: hidden;
+}
+
+.search-info {
+  cursor: pointer;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #DDD;
+  &:hover {
+    background-color: #E8F4FF;
+  }
+  &:after {
+    clear: both;
+    content: '.';
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  &:first-child {
+    margin-top: 10px;
+  }
+  &:last-child {
+    border-bottom-width: 0;
+  }
+  li {
+    float: left;
+    list-style: none;
+    padding-top: 10px;
+  }
+  &-pic {
+    position: relative;
+    width: 130px;
+    margin-right: 10px;
+    z-index: 5;
+    img {
+      height: 130px;
+      width: 130px;
+      border-width: 0;
+      border-radius: 5px;
+    }
+  }
+  &-title {
+    width: 446px;
+    margin-right: 10px;
+    h3 {
+      font-size: 14px;
+      display: inline;
+      margin-right: 5px;
+      vertical-align: middle;
+      font: bold 14px Simsun;
+      color: @light-blue;
+    }
+    &__address {
+      margin: 10px 0 5px;
+    }
+    &__comment {
+      color: #333;
+    }
+  }
+  &-price {
+    dfn {
+      color: #333;
+      font-size: 14px;
+    }
+    color: #F60;
+    font: normal 24px Tahoma;
+  }
+}

@@ -2,7 +2,7 @@ import * as types from '../mutation-types'
 
 export const state = {
   query: {
-    destination: '',
+    destination: '', // 目的地
     enter: '', // 入驻日期
     openhouse: '', // 开房日期
     checkout: '', // 退房日期

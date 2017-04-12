@@ -1,5 +1,37 @@
 export const hotel = [{
-	description: '',
-	price: '',
-	address: ''
+  title: '悠游酒店',
+  address: '浦东区',
+  score: '5.0',
+  count: '1890',
+  price: '666666'
+}, {
+  title: '星云酒店',
+  address: '宝山区',
+  score: '4.5',
+  count: '189',
+  price: '678'
+}, {
+  title: '戈林酒店',
+  address: '静安区',
+  score: '4.9',
+  count: '300',
+  price: '999'
+}, {
+  title: '浩泰酒店',
+  address: '长宁区',
+  score: '5.0',
+  count: '999',
+  price: '2000'
+}, {
+  title: '七天酒店',
+  address: '闵行区',
+  score: '4.1',
+  count: '689',
+  price: '6780'
+}, {
+  title: '六天酒店',
+  address: '宝山区',
+  score: '4.9',
+  count: '189',
+  price: '6780'
 }]

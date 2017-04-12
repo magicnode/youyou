@@ -3,8 +3,7 @@
 import Vue from 'vue'
 import IView from 'iview'
 import VueLazyload from 'vue-lazyload'
-import REGION_DATA from 'china-area-data'
-import { RegionPicker } from 'vue-region-picker'
+import Distpicker from 'v-distpicker'
 
 import App from './App'
 import router from './router'
@@ -16,8 +15,6 @@ import 'iview/dist/styles/iview.css'
 
 Vue.config.productionTip = false
 
-RegionPicker.region = REGION_DATA
-
 Vue.use(IView)
 Vue.use(VueLazyload, {
   preLoad: 1.3,
@@ -27,13 +24,16 @@ Vue.use(VueLazyload, {
 })
 
 Vue.component('v-img', vImg)
-Vue.component('region-picker', RegionPicker)
+Vue.component('v-distpicker', Distpicker)
 
 Vue.filter('pic', picurl)
 Vue.filter('ishot', ishot)
 Vue.filter('isnull', isnull)
 
 router.afterEach((to, from) => {
+  if (to.path === '/') {
+    router.push({path: '/hotel'})
+  }
 })
 
 /* eslint-disable no-new */
